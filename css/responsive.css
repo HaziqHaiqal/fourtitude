@@ -1,0 +1,21 @@
+@media (max-width: 991px) {
+
+    .service-section .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .service-section .service-item,
+    .contact-section .w-50,
+    .contact-section .contact-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .contact-section .submit-btn {
+        text-align: center;
+    }
+}
