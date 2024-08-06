@@ -144,15 +144,15 @@ section:nth-child(even) {
 service section
 ------------*/
 .service-section {
-  padding: 80px 0 80px;
+  padding: 80px 0;
 }
 
 .service-section .service-item {
+  display: flex;
+  flex-wrap: wrap;
   flex: 0 0 33.33%;
   max-width: 33.33%;
   padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .service-section .service-item-inner {
@@ -162,6 +162,7 @@ service section
   border-radius: 15px;
   border-width: thick;
   text-align: left;
+  transition: transform 0.3s ease;
 }
 
 .service-section .service-item-inner img {
@@ -179,6 +180,10 @@ service section
 .service-section .service-item-inner p {
   font-size: 16px;
   line-height: 26px;
+}
+
+.service-section .service-item:hover .service-item-inner {
+  transform: scale(1.05);
 }
 
 /*------------
