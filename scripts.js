@@ -34,3 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
     connectButton.disabled = true;
   });
 });
+
+function toggleNavigation() {
+  var x = document.getElementById("navLinks");
+  var menuIcon = document.getElementById("menuIcon");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+    menuIcon.src = "images/icons/icHamburger.png";
+  } else {
+    x.style.display = "flex";
+    menuIcon.src = "images/icons/icClose.png";
+  }
+}

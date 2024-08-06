@@ -32,6 +32,11 @@ header img {
   max-height: 20px;
 }
 
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
 nav .nav-links {
   display: flex;
   gap: 30px;
@@ -42,10 +47,15 @@ nav .nav-links a {
   text-decoration: none;
 }
 
-img {
-  vertical-align: middle;
-  max-width: 100%;
+nav .nav-links a:hover {
+  text-decoration: underline;
 }
+
+/* Styles for the hamburger menu (hidden by default) */
+.menu-toggle {
+  display: none;
+}
+
 
 /*------------
 Footer
