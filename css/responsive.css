@@ -53,6 +53,10 @@
         flex: 0 0 50%;
         max-width: 50%;
     }
+
+    footer {
+        text-align: center;
+    }
 }
 
 @media (max-width: 767px) {
@@ -106,13 +110,23 @@
     }
 
     .service-section .service-item,
-    .contact-section .w-50,
-    .contact-section .contact-item {
+    .contact-section .w-50 {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
+
+    .contact-section .contact-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
     .contact-section .submit-btn {
+        text-align: center;
+    }
+
+    footer {
         text-align: center;
     }
 }
