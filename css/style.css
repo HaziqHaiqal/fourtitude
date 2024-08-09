@@ -4,6 +4,8 @@ global style
 * {
   box-sizing: border-box;
   outline: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -104,8 +106,10 @@ common
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.border-shadow-light {
+.border-shadow {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 /*------------
@@ -193,50 +197,77 @@ contact section
   padding: 80px 0 80px;
 }
 
-.contact-section .contact-form {
-  flex: 0 0 100%;
-  max-width: 100%;
+.contact-section .inputBox {
+  position: relative;
+  width: 100%;
 }
 
-.contact-section .contact-item {
+.contact-section .inputBox input {
+  width: 100%;
+  height: 62px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+.contact-section .inputBox input {
+  width: 100%;
+  height: 62px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+.contact-section .inputBox input:last-child {
+  margin-bottom: 0;
+}
+
+.contact-section .inputBox input:hover {
+  border-color: #0F4AB2;
+  border-width: 2px;
+}
+
+#message {
+  height: 150px;
+  /* Set height to 150px for the message input */
+}
+
+.contact-section .inputBox label {
+  position: absolute;
+  display: inline-block;
+  font-style: italic;
+  pointer-events: none;
+  top: 1px;
+  left: 1px;
+  padding: 20px;
+  font-size: 16px;
+  transition: 0.5s;
+  color: darkgray;
+}
+
+.contact-section .inputBox input:focus~label,
+.contact-section .inputBox input:valid~label {
+  transform: translateY(-30px);
+  font-size: 12px;
+  font-style: italic;
+  text-shadow: -2px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF;
+}
+
+.contact-section .container-one-third-width {
+  display: flex;
   flex: 0 0 33.33%;
   max-width: 33.33%;
   padding: 15px;
-  display: flex;
 }
 
-.contact-section .w-100 {
-  padding: 0 15px;
+.contact-section .container-full-width {
   flex: 0 0 100%;
   max-width: 100%;
-}
-
-.contact-section .input-group {
-  background-color: white;
-  width: 100%;
-  padding: 15px;
-  margin: 0 0 25px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.contact-section .input-group .input-control {
-  display: block;
-  font-style: italic;
-  width: 100%;
-  height: 45px;
-  border-radius: 30px;
-  border: none;
-  font-size: 16px;
   padding: 0 15px;
-  color: #555555;
-  background-color: transparent;
-}
-
-.contact-section .input-group textarea.input-control {
-  height: 184px;
-  padding-top: 15px;
-  resize: none;
 }
 
 .contact-section .btn-container {
@@ -265,7 +296,7 @@ contact section
 .reset-button {
   border: 2px solid #0050A4;
   color: #0050A4;
-  background-color: #f9f9f9;
+  background-color: transparent;
 }
 
 .submit-button {

@@ -109,14 +109,13 @@
         display: flex;
     }
 
-    .service-section .service-item,
-    .contact-section .w-50 {
+    .service-section .service-item {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
 
-    .contact-section .contact-item {
+    .contact-section .container-one-third-width {
         flex: 0 0 100%;
         max-width: 100%;
         padding: 0 15px;

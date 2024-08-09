@@ -162,41 +162,40 @@
             <p>Every successful connection starts in conversation. Drop us a line today :)</p>
           </div>
         </div>
-        <!-- contact item start -->
-        <div class="row">
-          <div class="contact-form">
-            <form id="user-form">
-              <div class="row">
-                <div class="contact-item">
-                  <div class="input-group border-shadow-light hover-in-shadow">
-                    <input type="text" id="name" placeholder="Name" class="input-control" />
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="input-group border-shadow-light hover-in-shadow">
-                    <input type="text" id="email" placeholder="Email address" class="input-control" />
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="input-group border-shadow-light hover-in-shadow">
-                    <input type="text" id="contact" placeholder="Contact no." class="input-control" />
-                  </div>
-                </div>
-                <div class="w-100">
-                  <div class="input-group border-shadow-light hover-in-shadow">
-                    <textarea id="message" placeholder="How can we help?" class="input-control"></textarea>
-                  </div>
-                </div>
+        <form id="user-form">
+          <div class="row">
+            <div class="container-one-third-width">
+              <div class="inputBox">
+                <input type="text" id="name" required="required" />
+                <label>Name</label>
               </div>
-              <div class="row">
-                <div class="btn-container">
-                  <button type="reset" class="button reset-button">Clear</button>
-                  <button type="submit" class="button submit-button" disabled>Connect with us</button>
-                </div>
+            </div>
+            <div class="container-one-third-width">
+              <div class="inputBox">
+                <input type="text" id="email" required="required" />
+                <label>Email address</label>
               </div>
-            </form>
+            </div>
+            <div class="container-one-third-width">
+              <div class="inputBox">
+                <input type="text" id="contact" required="required" />
+                <label>Contact no.</label>
+              </div>
+            </div>
+            <div class="container-full-width">
+              <div class="inputBox">
+                <input type="text" id="message" required="required" />
+                <label>How can we help?</label>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="btn-container">
+              <button type="reset" class="button reset-button">Clear</button>
+              <button type="submit" class="button submit-button" disabled>Connect with us</button>
+            </div>
+          </div>
+        </form>
       </div>
       <!-- contact item end -->
     </section>
